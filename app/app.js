@@ -1,8 +1,8 @@
 import './app.scss';
 import 'angular';
-import './component';
+import loggerModule from './component';
 
-let app = angular.module('webapp', ['sanji.logger']);
+let app = angular.module('webapp', [loggerModule]);
 app.run((logger) => {
   logger.info('This is info message');
   logger.error('This is error message');
