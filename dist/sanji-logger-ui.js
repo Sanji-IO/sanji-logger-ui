@@ -56,6 +56,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	__webpack_require__(3);
@@ -71,6 +75,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	var app = angular.module('sanji.logger', []);
 	app.constant('toastr', _toastr2['default']);
 	app.service('logger', _loggerService2['default']);
+	exports['default'] = app.name;
+	module.exports = exports['default'];
 
 /***/ },
 /* 1 */
