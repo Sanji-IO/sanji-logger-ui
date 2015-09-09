@@ -1,6 +1,6 @@
 {
   "name": "sanji-logger-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "sanji-logger-ui UI",
   "scripts": {
     "test": "NODE_ENV=test karma start",
@@ -42,10 +42,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sanji/sanji-logger-ui.git"
+    "url": "https://github.com/Sanji-IO/sanji-logger-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/Sanji/sanji-logger-ui/issues"
+    "url": "https://github.com/Sanji-IO/sanji-logger-ui/issues"
   },
   "keywords": [
     "sanji"
@@ -56,5 +56,5 @@
     "url": "https://github.com/Sanji-IO"
   },
   "license": "MIT",
-  "homepage": "https://github.com/Sanji/sanji-logger-ui"
+  "homepage": "https://github.com/Sanji-IO/sanji-logger-ui"
 }
