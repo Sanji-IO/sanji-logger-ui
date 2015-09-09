@@ -1,0 +1,32 @@
+{
+  "name": "sanji-logger-ui",
+  "version": "1.0.0",
+  "homepage": "",
+  "author": {
+    "name": "Sanji",
+    "email": "",
+    "url": "https://github.com/Sanji-IO"
+  },
+  "description": "sanji-logger-ui UI",
+  "main": "dist/sanji-logger-ui.js",
+  "keywords": [
+    "sanji"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo",
+    "karma.conf.js",
+    "package.json",
+    "protractor_conf.js",
+    "README.md"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "toastr": "~2.1.2"
+  }
+}
