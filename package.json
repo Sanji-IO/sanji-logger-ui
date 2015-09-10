@@ -1,6 +1,6 @@
 {
   "name": "sanji-logger-ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "sanji-logger-ui UI",
   "main": "index",
   "scripts": {
