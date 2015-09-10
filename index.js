@@ -1,4 +1,4 @@
 import 'angular';
-import logger from './app/component';
+import component from './app/component';
 
-export default logger.name;
+export default component
