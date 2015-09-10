@@ -11,7 +11,6 @@ config.entry = {
   'sanji-ui': './component/index.js'
 };
 config.output.filename = 'sanji-logger-ui.js';
-config.output.libraryTarget = 'umd';
 
 config.module.loaders = [
   {
@@ -23,6 +22,11 @@ config.module.loaders = [
 config.plugins.push(
   new ExtractTextPlugin('sanji-logger-ui.css'),
   new WebpackNotifierPlugin({title: 'Webpack'}),
+  new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false
+    }
+  }),
   new webpack.optimize.DedupePlugin()
 );
 module.exports = config;

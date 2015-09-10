@@ -1,4 +1,5 @@
 import './app.scss';
+
 import 'angular';
 import loggerModule from './component';
 

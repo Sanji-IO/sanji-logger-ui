@@ -1,7 +1,4 @@
-require('lodash');
-require('angular');
-require('angular-sanji-window');
-require('./dist/sanji-logger-ui.css');
-require('./dist/sanji-logger-ui.js');
+import 'angular';
+import logger from './app/component';
 
-module.exports = 'sanji.logger';
+export default logger.name;
