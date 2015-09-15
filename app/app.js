@@ -1,3 +1,4 @@
+import 'toastr.scss';
 import './app.scss';
 
 import 'angular';

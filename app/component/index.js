@@ -1,4 +1,3 @@
-import 'toastr.scss';
 import toastr from 'toastr';
 
 import LoggerService from './logger.service';
