@@ -6,9 +6,11 @@ module. It provides some useful log function.
 [sanji-logger-ui-url]: https://npmjs.org/package/sanji-logger-ui
 [quality-badge]: http://npm.packagequality.com/badge/sanji-logger-ui.png
 [quality-url]: http://packagequality.com/#?package=sanji-logger-ui
-
+[sanji-logger-ui-coverage-image]: https://coveralls.io/repos/Sanji-IO/sanji-logger-ui/badge.svg?branch=master&service=github
+[sanji-logger-ui-coverage-url]: https://coveralls.io/github/Sanji-IO/sanji-logger-ui?branch=master
 [![NPM][sanji-logger-ui-icon]][sanji-logger-ui-url]
 [![Package Quality][quality-badge]][quality-url]
+[![Coverage Status][sanji-logger-ui-coverage-image]][sanji-logger-ui-coverage-url]
 
 ## Dependencies
 - angularjs
