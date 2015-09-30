@@ -30,7 +30,7 @@ module. It provides some useful log function.
 - [toastr](https://github.com/CodeSeven/toastr)
 
 ## Installation
-Sanji auth service is based on es6 + webpack to development and embrace npm to
+Sanji logger service is based on es6 + webpack to development and embrace npm to
 install it.
 
 ```sh
