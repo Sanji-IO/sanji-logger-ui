@@ -19,7 +19,7 @@ class LoggerService {
     this.$log.info('Success: ' + message, data);
   }
 
-  warning(message, data, title) {
+  warn(message, data, title) {
     this.toastr.warning(message, title);
     this.$log.warn('Warning: ' + message, data);
   }
