@@ -14,8 +14,8 @@ module. It provides some useful log function.
 [sanji-logger-ui-codacy-url]: https://www.codacy.com/public/zack9433/sanji-logger-ui.git
 
 [![NPM][sanji-logger-ui-icon]][sanji-logger-ui-url]
-[![Build Status][travis-build-badge]][travis-build-url]
 [![Package Quality][quality-badge]][quality-url]
+[![Build Status][travis-build-badge]][travis-build-url]
 [![Coverage Status][sanji-logger-ui-coverage-image]][sanji-logger-ui-coverage-url]
 [![Codacy Badge][sanji-logger-ui-codacy-image] ][sanji-logger-ui-codacy-url]
 
