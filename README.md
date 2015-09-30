@@ -8,9 +8,13 @@ module. It provides some useful log function.
 [quality-url]: http://packagequality.com/#?package=sanji-logger-ui
 [sanji-logger-ui-coverage-image]: https://coveralls.io/repos/Sanji-IO/sanji-logger-ui/badge.svg?branch=master&service=github
 [sanji-logger-ui-coverage-url]: https://coveralls.io/github/Sanji-IO/sanji-logger-ui?branch=master
+[sanji-logger-ui-codacy-image]: https://api.codacy.com/project/badge/13d7e2e9bf1b40a3bd9a3113c7cea587
+[sanji-logger-ui-codacy-url]: https://www.codacy.com/public/zack9433/sanji-logger-ui.git
+
 [![NPM][sanji-logger-ui-icon]][sanji-logger-ui-url]
 [![Package Quality][quality-badge]][quality-url]
 [![Coverage Status][sanji-logger-ui-coverage-image]][sanji-logger-ui-coverage-url]
+[![Codacy Badge][sanji-logger-ui-codacy-image] ][sanji-logger-ui-codacy-url]
 
 ## Dependencies
 - angularjs
