@@ -12,16 +12,22 @@ module. It provides some useful log function.
 [sanji-logger-ui-coverage-url]: https://coveralls.io/github/Sanji-IO/sanji-logger-ui?branch=master
 [sanji-logger-ui-codacy-image]: https://api.codacy.com/project/badge/13d7e2e9bf1b40a3bd9a3113c7cea587
 [sanji-logger-ui-codacy-url]: https://www.codacy.com/public/zack9433/sanji-logger-ui.git
+[dependencies-image]: https://david-dm.org/Sanji-IO/sanji-logger-ui.png
+[dependencies-url]: https://david-dm.org/Sanji-IO/sanji-logger-ui
+[devdependencies-image]: https://david-dm.org/Sanji-IO/sanji-logger-ui/dev-status.png
+[devdependencies-url]: https://david-dm.org/Sanji-IO/sanji-logger-ui#info=devDependencies
 
 [![NPM][sanji-logger-ui-icon]][sanji-logger-ui-url]
 [![Package Quality][quality-badge]][quality-url]
 [![Build Status][travis-build-badge]][travis-build-url]
 [![Coverage Status][sanji-logger-ui-coverage-image]][sanji-logger-ui-coverage-url]
-[![Codacy Badge][sanji-logger-ui-codacy-image] ][sanji-logger-ui-codacy-url]
+[![Codacy Badge][sanji-logger-ui-codacy-image]][sanji-logger-ui-codacy-url]
+[![dependencies][dependencies-image]][dependencies-url]
+[![devdependencies][devdependencies-image]][devdependencies-url]
 
 ## Dependencies
-- angularjs
-- toastr
+- [angularjs](https://github.com/angular/angular.js)
+- [toastr](https://github.com/CodeSeven/toastr)
 
 ## Installation
 Sanji auth service is based on es6 + webpack to development and embrace npm to
