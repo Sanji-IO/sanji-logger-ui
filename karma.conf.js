@@ -13,7 +13,8 @@ module.exports = function(config) {
       'karma-sourcemap-loader',
       'karma-webpack',
       'karma-coverage',
-      'karma-mocha-reporter'
+      'karma-mocha-reporter',
+      'karma-coveralls'
     ],
 
     webpack: webpackConfig,
@@ -44,7 +45,13 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['mocha', 'coverage'],
+    reporters: ['mocha', 'coverage', 'coveralls'],
+
+
+    coverageReporter: {
+      type: 'lcov', // lcov or lcovonly are required for generating lcov.info files
+      dir: 'coverage/'
+    },
 
 
     // Mocha reporter options
