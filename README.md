@@ -37,6 +37,9 @@ install it.
 npm install sanji-logger-ui --save
 ```
 
+## References
+- [johnpapa/generator-hottowel](https://github.com/johnpapa/generator-hottowel)
+
 ## Contact
 
 Author: Zack Yang &copy; 2015
