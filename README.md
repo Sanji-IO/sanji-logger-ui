@@ -33,13 +33,13 @@ module. It provides some useful log function.
 Sanji logger service is based on es6 + webpack to development and embrace npm to
 install it.
 
-```sh
+```shell
 npm install sanji-logger-ui --save
 ```
 
 ## Contact
 
-Author: Zack Yang &copy; 2014
+Author: Zack Yang &copy; 2015
 
 * [@zack9433](https://twitter.com/zack9433)
 
