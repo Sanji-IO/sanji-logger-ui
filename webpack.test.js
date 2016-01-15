@@ -1,10 +1,9 @@
 'use strict';
 
 var webpack = require('webpack');
-// var bourbon = require('node-bourbon').includePaths;
 var config = require('./webpack.config');
 
-config.devtool = 'inline-source-map';
+config.devtool = 'source-map';
 // Should be an empty object if it's generating a test build
 // Karma will set this when it's a test build
 config.entry = {};

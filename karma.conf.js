@@ -1,8 +1,8 @@
 // Karma configuration
-// Generated on Tue Sep 29 2015 13:32:20 GMT+0800 (CST)
 'use strict';
 
 var webpackConfig = require('./webpack.test');
+var test = process.env.NODE_ENV === 'test';
 
 module.exports = function(config) {
   config.set({
@@ -13,9 +13,10 @@ module.exports = function(config) {
       'karma-sourcemap-loader',
       'karma-webpack',
       'karma-coverage',
-      'karma-mocha-reporter',
-      'karma-coveralls'
+      'karma-mocha-reporter'
     ],
+
+    autoWatch: test,
 
     webpack: webpackConfig,
 
@@ -23,9 +24,13 @@ module.exports = function(config) {
       noInfo: true
     },
 
+    client: {
+      captureConsole: true
+    },
+
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['mocha', 'chai', 'sinon-chai'],
 
 
     // list of files / patterns to load in the browser
@@ -45,7 +50,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['mocha', 'coverage', 'coveralls'],
+    reporters: ['mocha', 'coverage'],
 
 
     coverageReporter: {
@@ -85,6 +90,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
+    singleRun: !test
   })
 }
