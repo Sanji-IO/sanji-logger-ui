@@ -2,7 +2,7 @@
   "name": "sanji-logger-ui",
   "author": "Zack Yang <zack9433@gmail.com> (https://github.com/zack9433)",
   "description": "sanji-logger-ui UI",
-  "main": "index",
+  "main": "dist/sanji-logger-ui.js",
   "config": {
     "ghooks": {
       "pre-commit": "npm run test:once && npm run check-coverage"
@@ -20,7 +20,8 @@
     "check-coverage": "istanbul check-coverage --statements 90 --branches 90 --functions 90 --lines 90",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "start": "NODE_ENV=development node server/dev-server.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "publish-latest": "publish-latest",
+    "semantic-release": "semantic-release pre && npm publish && npm run publish-latest && semantic-release post"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.0",
@@ -54,14 +55,15 @@
     "node-bourbon": "~4.2.3",
     "node-sass": "~3.4.2",
     "phantomjs": "~2.1.3",
+    "publish-latest": "~1.1.2",
     "raw-loader": "~0.5.1",
     "sass-loader": "~3.2.0",
+    "semantic-release": "^4.3.5",
     "style-loader": "~0.13.0",
     "url-loader": "~0.5.7",
     "webpack": "~1.12.11",
     "webpack-dev-server": "~1.14.1",
-    "webpack-notifier": "~1.3.0",
-    "semantic-release": "^4.3.5"
+    "webpack-notifier": "~1.3.0"
   },
   "repository": {
     "type": "git",

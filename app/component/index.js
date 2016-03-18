@@ -1,3 +1,4 @@
+import angular from 'angular';
 import toastr from 'toastr';
 
 import LoggerService from './logger.service';

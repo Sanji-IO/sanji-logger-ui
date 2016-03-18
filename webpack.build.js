@@ -11,9 +11,21 @@ config.entry = {
   'sanji-ui': './component/index.js'
 };
 config.output.filename = 'sanji-logger-ui.js';
+config.output.libraryTarget = 'umd';
 config.output.library = 'sjLogger';
 config.externals = {
-  'toastr': 'toastr'
+  angular: {
+    root: 'angular',
+    commonjs2: 'angular',
+    commonjs: 'angular',
+    amd: 'angular'
+  },
+  toastr: {
+    root: 'toastr',
+    commonjs2: 'toastr',
+    commonjs: 'toastr',
+    amd: 'toastr'
+  }
 };
 
 config.module.loaders = [
@@ -25,7 +37,7 @@ config.module.loaders = [
 
 config.plugins.push(
   new ExtractTextPlugin('sanji-logger-ui.css'),
-  new WebpackNotifierPlugin({title: 'Webpack'}),
-  new webpack.optimize.DedupePlugin()
+  new webpack.optimize.DedupePlugin(),
+  new webpack.optimize.AggressiveMergingPlugin()
 );
 module.exports = config;
