@@ -38,6 +38,11 @@ config.module.loaders = [
 config.plugins.push(
   new ExtractTextPlugin('sanji-logger-ui.css'),
   new webpack.optimize.DedupePlugin(),
-  new webpack.optimize.AggressiveMergingPlugin()
+  new webpack.optimize.AggressiveMergingPlugin(),
+  new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false
+    }
+  })
 );
 module.exports = config;
