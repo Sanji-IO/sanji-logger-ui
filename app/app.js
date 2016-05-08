@@ -1,7 +1,7 @@
 import 'toastr.scss';
 import './app.scss';
 
-import 'angular';
+import angular from 'angular';
 import loggerModule from './component';
 
 let app = angular.module('webapp', [loggerModule]);

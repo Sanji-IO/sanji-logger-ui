@@ -4,7 +4,6 @@ describe('Service: logger', function() {
   let $log;
   let toastr;
   let logger;
-  let component;
   let string;
   let log, warn, info, success, error;
 
