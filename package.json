@@ -43,7 +43,7 @@
     "file-loader": "~0.8.5",
     "ghooks": "^1.2.0",
     "html-webpack-plugin": "~1.7.0",
-    "isparta-loader": "~1.0.0",
+    "isparta-loader": "~2.0.0",
     "istanbul": "~0.4.2",
     "karma": "~0.13.19",
     "karma-chai-plugins": "~0.7.0",
