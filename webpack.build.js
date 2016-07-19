@@ -21,9 +21,15 @@ config.externals = [
 config.module.loaders = [
   {
     test: /\.scss$/,
-    loader: ExtractTextPlugin.extract('style-loader', 'css!postcss!sass?includePaths[]=' + bourbon)
-  }
+    loader: ExtractTextPlugin.extract({
+      notExtractLoader: 'style-loader',
+      loader: 'css!postcss!sass?includePaths[]=' + bourbon
+    })
+  },
+  {test: /\.css$/, loader: 'style!css!postcss'}
 ].concat(config.module.loaders);
+
+config.postcss = [ autoprefixer({ browsers: ['last 2 versions'] }) ];
 
 config.plugins.push(
   new ExtractTextPlugin('sanji-logger-ui.css'),

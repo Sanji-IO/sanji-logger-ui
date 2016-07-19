@@ -26,7 +26,7 @@ var config = {
   },
   module: {
     preLoaders: [
-      {test: /\.js$/, loader: "eslint", exclude: /(node_modules)/}
+      {test: /\.js$/, loader: 'eslint', exclude: /(node_modules)/}
     ],
     loaders: [
       {test: /\.js$/, loader: 'ng-annotate!babel?cacheDirectory', exclude: /(node_modules)/},
