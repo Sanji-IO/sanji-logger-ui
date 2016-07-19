@@ -1,3 +1,6 @@
+import angular from 'angular';
+import 'angular-mocks';
+
 import loggerModule from './index';
 
 describe('Service: logger', function() {
