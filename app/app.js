@@ -11,3 +11,7 @@ app.run(logger => {
   logger.warn('This is warning message');
   logger.success('This is success message');
 });
+
+angular.element(document).ready(() => {
+  angular.bootstrap(document.body, ['webapp']);
+});
