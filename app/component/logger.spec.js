@@ -1,7 +1,7 @@
 import angular from 'angular';
 import 'angular-mocks';
 
-import loggerModule from './index';
+import {sjLogger} from './index';
 
 describe('Service: logger', function() {
   let $log;
@@ -10,7 +10,7 @@ describe('Service: logger', function() {
   let string;
   let log, warn, info, success, error;
 
-  beforeEach(angular.mock.module(loggerModule));
+  beforeEach(angular.mock.module(sjLogger));
 
   beforeEach(angular.mock.inject(function(_$log_, _logger_, _toastr_) {
     $log = _$log_;

@@ -2,7 +2,7 @@ import 'toastr.scss';
 import './app.scss';
 
 import angular from 'angular';
-import sjLogger from './component';
+import {sjLogger} from './component';
 
 const app = angular.module('webapp', [sjLogger]);
 app.run(logger => {
