@@ -2,9 +2,9 @@ import 'toastr.scss';
 import './app.scss';
 
 import angular from 'angular';
-import loggerModule from './component';
+import sjLogger from './component';
 
-let app = angular.module('webapp', [loggerModule]);
+const app = angular.module('webapp', [sjLogger]);
 app.run(logger => {
   logger.info('This is info message');
   logger.error('This is error message');
