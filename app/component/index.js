@@ -3,7 +3,8 @@ import toastr from 'toastr';
 
 import LoggerService from './logger.service';
 
-const app = angular.module('sanji.logger', []);
-app.constant('toastr', toastr);
-app.service('logger', LoggerService);
-export default app.name;
+const sjLogger = angular.module('sanji.logger', [])
+  .constant('toastr', toastr)
+  .service('logger', LoggerService)
+  .name;
+export {sjLogger};
