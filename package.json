@@ -32,7 +32,6 @@
     "babel-loader": "^6.0.0",
     "babel-plugin-lodash": "^3.2.4",
     "babel-plugin-__coverage__": "^11.0.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
     "babel-preset-es2015-webpack": "^6.4.1",
     "chai": "~3.5.0",
     "codecov.io": "^0.1.6",
@@ -90,5 +89,5 @@
     "jquery": "~2.2.0",
     "toastr": "~2.1.2"
   },
-  "version": "1.2.7"
+  "version": "1.2.8"
 }
