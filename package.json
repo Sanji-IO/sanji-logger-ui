@@ -28,8 +28,8 @@
     "angular-mocks": "~1.5.0",
     "codecov.io": "^0.1.6",
     "publish-latest": "~1.1.2",
-    "sanji-common-devs-ui": "~1.0.2",
-    "semantic-release": "^4.3.5"
+    "sanji-common-devs-ui": "~1.0.4",
+    "semantic-release": "^6.3.2"
   },
   "repository": {
     "type": "git",
