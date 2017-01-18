@@ -1,0 +1,22 @@
+md-toast {
+  &.md-success-toast-theme {
+    .md-toast-content {
+      background-color: rgb(76, 175, 80);
+    }
+  }
+  &.md-error-toast-theme {
+    .md-toast-content {
+      background-color: rgb(244, 67, 54);
+    }
+  }
+  &.md-warn-toast-theme {
+    .md-toast-content {
+      background-color: #f89406;
+    }
+  }
+  &.md-info-toast-theme {
+    .md-toast-content {
+      background-color: #2f96b4;
+    }
+  }
+}
