@@ -2,9 +2,21 @@ import { LoggerService } from './logger.service';
 import { Inject, NgModule } from 'ng-metadata/core';
 
 export class LoggerProvider {
+  private config: any;
+  configure: Function;
+
   constructor( @Inject('$mdThemingProvider') private $mdThemingProvider: ng.material.IThemingProvider) {
-    $mdThemingProvider.theme('success-toast');
-    $mdThemingProvider.theme('error-toast');
+    this.config = {
+      successTheme: 'success-toast',
+      errorTheme: 'error-toast'
+    };
+
+    this.configure(this.config);
+
+    this.configure = cfg => {
+      $mdThemingProvider.theme(cfg.successTheme);
+      $mdThemingProvider.theme(cfg.errorTheme);
+    };
   }
 
   $get(
