@@ -11,12 +11,12 @@ export class LoggerProvider {
       errorTheme: 'error-toast'
     };
 
-    this.configure(this.config);
-
     this.configure = cfg => {
       $mdThemingProvider.theme(cfg.successTheme);
       $mdThemingProvider.theme(cfg.errorTheme);
     };
+
+    this.configure(this.config);
   }
 
   $get(
