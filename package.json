@@ -31,7 +31,9 @@
     "jquery": "~3.3.1",
     "toastr": "~2.1.4",
     "codecov.io": "^0.1.6",
-    "sanji-common-devs-ui": "^7.0.0"
+    "sanji-common-devs-ui": "^7.0.0",
+    "travis-deploy-once": "^4.3.3",
+    "semantic-release": "^12.2.4"
   },
   "repository": {
     "type": "git",
@@ -47,5 +49,6 @@
     "angular": "~1.6.8",
     "jquery": "~3.3.1",
     "toastr": "~2.1.4"
-  }
+  },
+  "version": "0.0.0-development"
 }
