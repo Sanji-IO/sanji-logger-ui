@@ -3,7 +3,6 @@
 
 var webpackConfig = require('./webpack.test');
 var test = process.env.NODE_ENV === 'test';
-var IS_TRAVIS = process.env.TRAVIS;
 
 module.exports = function(config) {
   config.set({
