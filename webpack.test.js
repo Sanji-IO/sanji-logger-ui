@@ -6,27 +6,35 @@ const bourbon = require('node-bourbon').includePaths;
 config.devtool = 'source-map';
 // Should be an empty object if it's generating a test build
 // Karma will set this when it's a test build
-config.entry = {};
+config.entry = {
+  main: './app.js'
+};
 // Should be an empty object if it's generating a test build
 // Karma will handle setting it up for you when it's a test build
 config.output = {};
 
 config.module.rules = [
-  {test: /\.scss/, loader: 'style-loader!css-loader!postcss-loader!sass-loader?includePaths[]=' + bourbon},
-  {test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader'},
-  {test: /\.(png|jpg|gif|jpeg)$/, loader: 'url-loader?limit=8192'},
-  {test: /\.(woff|woff2)$/, loader: 'url-loader?limit=10000&minetype=application/font-woff'},
-  {test: /\.(ttf|eot|svg)$/, loader: 'file-loader'}
+  {
+    test: /\.scss/,
+    use: [
+      'style-loader',
+      { loader: 'css-loader', options: { importLoaders: 1 } },
+      'postcss-loader',
+      {
+        loader: 'sass-loader',
+        options: {
+          includePaths: bourbon
+        }
+      }
+    ]
+  },
+  {
+    test: /\.css$/,
+    use: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }, 'postcss-loader']
+  },
+  { test: /\.(png|jpg|gif|jpeg)$/, loader: 'url-loader?limit=8192' },
+  { test: /\.(woff|woff2)$/, loader: 'url-loader?limit=10000&minetype=application/font-woff' },
+  { test: /\.(ttf|eot|svg)$/, loader: 'file-loader' }
 ].concat(config.module.rules);
-
-config.plugins.push(
-  new webpack.LoaderOptionsPlugin({
-    options:{
-      postcss: [
-        autoprefixer({ browsers: ['last 2 versions'] })
-      ]
-    }
-  })
-);
 
 module.exports = config;

@@ -5,14 +5,14 @@
   "main": "dist/sanji-logger-ui.js",
   "config": {
     "ghooks": {
-      "pre-commit": "opt --in pre-commit --exec 'npm run validate'"
+      "pre-commit": "opt --in pre-commit --exec 'yarn validate'"
     },
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
   },
   "scripts": {
-    "validate": "npm run test:once && npm run check-coverage",
+    "validate": "yarn test:once && yarn check-coverage",
     "test": "cross-env NODE_ENV=test BABEL_ENV=test karma start",
     "test:once": "cross-env BABEL_ENV=test karma start",
     "prebuild": "rimraf dist && mkdir dist",
@@ -21,15 +21,17 @@
     "check-coverage": "istanbul check-coverage --statements 75 --branches 75 --functions 75 --lines 75",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "start": "cross-env NODE_ENV=development node server/dev-server.js",
-    "publish-latest": "publish-latest",
-    "semantic-release": "semantic-release pre && npm publish && npm run publish-latest && semantic-release post"
+    "prepublishOnly": "yarn build",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
-    "angular-mocks": "~1.5.0",
+    "angular-mocks": "~1.6.8",
+    "angular": "~1.6.8",
+    "jquery": "~3.3.1",
+    "toastr": "~2.1.4",
     "codecov.io": "^0.1.6",
-    "publish-latest": "~1.1.2",
-    "sanji-common-devs-ui": "~1.0.4",
-    "semantic-release": "^6.3.2"
+    "sanji-common-devs-ui": "^7.0.0"
   },
   "repository": {
     "type": "git",
@@ -38,15 +40,12 @@
   "bugs": {
     "url": "https://github.com/Sanji-IO/sanji-logger-ui/issues"
   },
-  "keywords": [
-    "sanji",
-    "logger"
-  ],
+  "keywords": ["sanji", "logger"],
   "license": "MIT",
   "homepage": "https://github.com/Sanji-IO/sanji-logger-ui",
-  "dependencies": {
-    "angular": "~1.5.0",
-    "jquery": "~2.2.0",
-    "toastr": "~2.1.2"
+  "peerDependencies": {
+    "angular": "~1.6.8",
+    "jquery": "~3.3.1",
+    "toastr": "~2.1.4"
   }
 }

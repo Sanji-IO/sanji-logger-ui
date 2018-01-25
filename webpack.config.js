@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV;
 const nodeRoot = path.join(__dirname, 'node_modules');
@@ -20,13 +19,16 @@ const config = {
   module: {
     rules: [
       { test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/, enforce: 'pre' },
-      {test: /\.js$/, loader: 'babel-loader?cacheDirectory', exclude: /(node_modules)/},
-      { test: /\.html$/, loader: 'ng-cache-loader?prefix=[dir]/[dir]', exclude: [/node_modules/, path.join(__dirname, '/app/index.html')] }
+      { test: /\.js$/, loader: 'babel-loader?cacheDirectory', exclude: /(node_modules)/ },
+      {
+        test: /\.html$/,
+        loader: 'ng-cache-loader?prefix=[dir]/[dir]',
+        exclude: [/node_modules/, path.join(__dirname, '/app/index.html')]
+      }
     ]
   },
   plugins: [
-    new ProgressBarPlugin(),
-    new LodashModuleReplacementPlugin,
+    new LodashModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       __TEST__: 'test' === NODE_ENV,
       __DEV__: 'development' === NODE_ENV,
